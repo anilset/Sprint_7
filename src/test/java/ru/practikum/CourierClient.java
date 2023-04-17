@@ -1,6 +1,7 @@
 package ru.practikum;
 
 import io.restassured.RestAssured;
+import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 
 import static io.restassured.RestAssured.given;
@@ -36,14 +37,13 @@ public class CourierClient {
                 .then();
     }
 
-    public ValidatableResponse deleteCourier(LoginResponse id) {
+    public Response deleteCourier(LoginResponse id) {
         return given()
                 .header("Content-type", "application/json")
                 .and()
                 .body(id)
                 .when()
-                .delete(DELETE_PATH)
-                .then();
+                .delete(DELETE_PATH);
     }
 
 }

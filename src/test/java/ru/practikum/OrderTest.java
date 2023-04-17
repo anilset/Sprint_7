@@ -1,15 +1,19 @@
 package ru.practikum;
 
 import io.restassured.RestAssured;
-import io.restassured.response.*;
-import org.apache.commons.lang3.RandomStringUtils;
-import org.junit.jupiter.api.*;
-import org.junit.jupiter.params.*;
+import io.restassured.response.Response;
+import io.restassured.response.ValidatableResponse;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.*;
-import java.util.stream.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+import java.util.stream.Stream;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -44,12 +48,12 @@ public class OrderTest {
         Order order = new Order()
                 .setFirstName(new Utilities().nextFirstName)
                 .setLastName(new Utilities().nextFirstName)
-                .setAddress(new Utilities().nextLogin)
+                .setAddress(new Utilities().nextAddress)
                 .setMetroStation(random.nextInt(10))
-                .setPhone(RandomStringUtils.randomNumeric(11))
+                .setPhone(new Utilities().nextPhoneNumber)
                 .setRentTime(random.nextInt(10))
                 .setDeliveryDate(TOMORROW)
-                .setComment(new Utilities().nextFirstName)
+                .setComment(new Utilities().nextAddress)
                 .setColor(colours);
 
         ValidatableResponse response =

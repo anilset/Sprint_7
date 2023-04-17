@@ -1,7 +1,9 @@
 package ru.practikum;
 
+import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.*;
 
+import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.BeforeEach;
@@ -17,6 +19,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.params.provider.Arguments.of;
+import static ru.practikum.CourierClient.DELETE_PATH;
 import static ru.practikum.CourierGenerator.getRandomCourier;
 
 public class CourierTest {
@@ -90,18 +93,18 @@ public class CourierTest {
     public void courierLoginCheck() {
         Courier courier = getRandomCourier();
         courierClient.create(courier);
-        ValidatableResponse response = courierClient.login(CourierCreds.getCredsFrom(courier));
-        assertThat(response.extract().path("id"), notNullValue());
+        LoginResponse response = courierClient.login(CourierCreds.getCredsFrom(courier)).extract().body().as(LoginResponse.class);
+        assertThat(response.getId(), notNullValue());
     }
 
     @Test
     public void deleteCourierCheck() {
         Courier courier = getRandomCourier();
         courierClient.create(courier);
-        courierClient.login(CourierCreds.getCredsFrom(courier)).assertThat().statusCode(200);
+        courierClient.login(CourierCreds.getCredsFrom(courier));
         LoginResponse login = courierClient.login(CourierCreds.getCredsFrom(courier)).extract().body().as(LoginResponse.class);
-        ValidatableResponse response = courierClient.deleteCourier(new LoginResponse(login.getId()));
-        assertEquals(200, response.extract().statusCode());
+        Response response = courierClient.deleteCourier(login);
+        assertEquals(200, response.statusCode());
     }
 }
 

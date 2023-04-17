@@ -1,5 +1,6 @@
 package ru.practikum;
 
+import com.github.javafaker.Faker;
 import org.apache.commons.lang3.RandomStringUtils;
 import java.time.LocalDate;
 
@@ -9,4 +10,8 @@ public class Utilities {
     public String nextPw = RandomStringUtils.randomAlphabetic(2) + RandomStringUtils.randomNumeric(6);
     public static final LocalDate CURRENT_DATE = LocalDate.now();
     public static final String TOMORROW = String.valueOf(CURRENT_DATE.plusDays(1));
+
+    public String nextAddress = RandomStringUtils.randomAlphanumeric(15);
+    public String nextPhoneNumber = RandomStringUtils.randomNumeric(11);
+
 }
