@@ -1,7 +1,6 @@
 package ru.practikum;
 
 import static io.restassured.RestAssured.given;
-import static org.junit.jupiter.api.Assertions.*;
 
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
@@ -17,9 +16,8 @@ import java.util.stream.Stream;
 import static org.apache.http.HttpStatus.SC_CREATED;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.notNullValue;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.params.provider.Arguments.of;
-import static ru.practikum.CourierClient.DELETE_PATH;
 import static ru.practikum.CourierGenerator.getRandomCourier;
 
 public class CourierTest {
@@ -35,7 +33,11 @@ public class CourierTest {
     public void createCourierCheck() {
         Courier courier = getRandomCourier();
         ValidatableResponse response = courierClient.create(courier);
-        assertEquals(SC_CREATED, response.extract().statusCode());
+        Ok ok = response.extract().body().as(Ok.class);
+        assertAll (
+                ()-> assertEquals(SC_CREATED, response.extract().statusCode()),
+                ()-> assertTrue(ok.getOk())
+        );
     }
 
     @Test
