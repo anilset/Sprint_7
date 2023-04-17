@@ -17,10 +17,8 @@
         <aspectj.version>1.9.19</aspectj.version>
         <!-- версия Allure -->
         <allure.version>2.21.0</allure.version>
-
         <junit5.version>5.9.2</junit5.version>
         <javafaker.version>1.0.2</javafaker.version>
-
     </properties>
 
     <dependencies>
@@ -38,6 +36,7 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.12.0</version>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-java-commons -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
