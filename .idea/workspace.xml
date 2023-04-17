@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d2b6b73a-d795-45dc-91e9-7374ea9de30e" name="Changes" comment="&quot;tests added&quot;">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practikum/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/practikum/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practikum/CourierClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/practikum/CourierClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practikum/CourierTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/practikum/CourierTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practikum/OrderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/practikum/OrderTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="0fba8fdf-a9d3-47e9-af9a-7c25b006ee21" />
+        <option name="url" value="https://github.com/anilset/Sprint__7new.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2OZPsyD2EqUfHg2sAmlTHCtBCUQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": ""
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.practikum" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.practikum" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.CourierTest.deleteCourierCheck">
+    <configuration name="CourierTest.courierLoginCheck (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.practikum.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.practikum" />
+      <option name="MAIN_CLASS_NAME" value="ru.practikum.CourierTest" />
+      <option name="METHOD_NAME" value="courierLoginCheck" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourierTest.courierLoginCheck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.practikum.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.practikum" />
+      <option name="MAIN_CLASS_NAME" value="ru.practikum.CourierTest" />
+      <option name="METHOD_NAME" value="courierLoginCheck(java.lang.String,java.lang.String,java.lang.Integer)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourierTest.deleteCourierCheck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.practikum.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.practikum" />
+      <option name="MAIN_CLASS_NAME" value="ru.practikum.CourierTest" />
+      <option name="METHOD_NAME" value="deleteCourierCheck" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderTest.checkListOfOrders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.practikum.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.practikum" />
+      <option name="MAIN_CLASS_NAME" value="ru.practikum.OrderTest" />
+      <option name="METHOD_NAME" value="checkListOfOrders" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderTest.checkOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.practikum.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.practikum" />
+      <option name="MAIN_CLASS_NAME" value="ru.practikum.OrderTest" />
+      <option name="METHOD_NAME" value="checkOrder(java.util.List)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CourierTest.deleteCourierCheck" />
+        <item itemvalue="JUnit.OrderTest.checkListOfOrders" />
+        <item itemvalue="JUnit.OrderTest.checkOrder" />
+        <item itemvalue="JUnit.CourierTest.courierLoginCheck (1)" />
+        <item itemvalue="JUnit.CourierTest.courierLoginCheck" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d2b6b73a-d795-45dc-91e9-7374ea9de30e" name="Changes" comment="" />
+      <created>1681765343218</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1681765343218</updated>
+    </task>
+    <task id="LOCAL-00001" summary="&quot;initial commit&quot;">
+      <created>1681765910896</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1681765910896</updated>
+    </task>
+    <task id="LOCAL-00002" summary="&quot;tests added&quot;">
+      <created>1681767031588</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681767031588</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;initial commit&quot;" />
+    <MESSAGE value="&quot;tests added&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;tests added&quot;" />
+  </component>
+</project>
