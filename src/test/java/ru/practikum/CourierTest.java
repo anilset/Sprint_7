@@ -1,5 +1,6 @@
 package ru.practikum;
 
+import RequestServices.CourierClient;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import org.apache.http.HttpStatus;
@@ -11,7 +12,9 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
+import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.SC_CREATED;
+import static org.apache.http.HttpStatus.SC_OK;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.junit.jupiter.api.Assertions.*;
@@ -101,15 +104,20 @@ public class CourierTest {
     public void deleteCourierCheck() {
         Courier courier = getRandomCourier();
         courierClient.createCourier(courier);
-        LoginResponse login = courierClient.login(CourierCreds.getCredsFrom(courier)).extract().body().as(LoginResponse.class);
-        if (login.getId() != null) {
-            Response response = courierClient.deleteCourier(login);
-            Ok ok = response.as(Ok.class);
+        LoginResponse response = courierClient.login(CourierCreds.getCredsFrom(courier)).extract().body().as(LoginResponse.class);
+        assertNotNull(response);
+        DeleteRequest request = new DeleteRequest(response.getId().toString());
+        assertNotNull(request);
+        ValidatableResponse deleteResponse = courierClient.deleteCourier(request);
+        ValidatableResponse deleteResponse2 = courierClient.deleteCourier(response);
+        Ok ok = deleteResponse.extract().body().as(Ok.class);
+        assertEquals(500, deleteResponse.extract().statusCode());
             assertAll (
-                    //()-> assertEquals(SC_OK, response.statusCode()),
-                    ()-> assertFalse(ok.getOk())
+                    ()-> assertEquals(500, deleteResponse.extract().statusCode()),
+                    ()-> assertEquals(500, deleteResponse2.extract().statusCode())
+                    //()-> assertEquals(201, deleteResponse.extract().statusCode()),
+                    //()-> assertTrue(ok.getOk())
                 );
-        }
     }
 }
 

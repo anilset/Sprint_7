@@ -1,1 +1,0 @@
-{"uuid":"a8bbe4f5-3a2a-42b6-9ad6-8dc19c61caf1","name":"deleteCourierCheck()","children":["ac7f17b1-313c-42b4-8ece-0aa561a9c991"],"befores":[{"name":"setUp","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1681768386357,"stop":1681768387148}],"afters":[],"start":1681768386252,"stop":1681768389211}

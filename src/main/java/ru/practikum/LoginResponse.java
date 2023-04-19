@@ -2,16 +2,17 @@ package ru.practikum;
 
 public class LoginResponse {
 
-    private String id;
+    public Integer id;
+
 
     public LoginResponse() {
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 }

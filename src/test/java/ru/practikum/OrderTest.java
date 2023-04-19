@@ -1,5 +1,6 @@
 package ru.practikum;
 
+import RequestServices.OrderService;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
@@ -24,10 +25,7 @@ import static ru.practikum.Config.BASE_URL;
 import static ru.practikum.Utilities.TOMORROW;
 
 public class OrderTest {
-
-    Random random = new Random();
-    public final static String ORDER_PATH = "/api/v1/orders";
-    public final static String ORDER_LIST_PATH = "/api/v1/orders";
+    OrderService service = new OrderService();
     @BeforeEach
     public void setUp() {
         RestAssured.baseURI = BASE_URL;
@@ -45,25 +43,8 @@ public class OrderTest {
     @ParameterizedTest
     @MethodSource("provideColours")
     public void checkOrder(List <String> colours) {
-        Order order = new Order()
-                .setFirstName(new Utilities().nextFirstName)
-                .setLastName(new Utilities().nextFirstName)
-                .setAddress(new Utilities().nextAddress)
-                .setMetroStation(random.nextInt(10))
-                .setPhone(new Utilities().nextPhoneNumber)
-                .setRentTime(random.nextInt(10))
-                .setDeliveryDate(TOMORROW)
-                .setComment(new Utilities().nextAddress)
-                .setColor(colours);
-
-        ValidatableResponse response =
-                given()
-                        .header("Content-type", "application/json")
-                        .and()
-                        .body(order)
-                        .when()
-                        .post(ORDER_PATH)
-                        .then();
+        Order order = new OrderGenerator().getRandomOrder(colours);
+        ValidatableResponse response = service.createOrder(order);
         assertAll(
                 ()-> assertEquals(201, response.extract().statusCode()),
                 ()-> assertThat(response.extract().path("track"), notNullValue())
@@ -72,11 +53,7 @@ public class OrderTest {
 
     @Test
     public void checkListOfOrders() {
-        ValidatableResponse response =
-                given()
-                        .header("Content-type", "application/json")
-                        .get(ORDER_LIST_PATH)
-                        .then();
+        ValidatableResponse response = service.getListOfOrders();
         List <Response> responses = response.extract().path("orders");
         assertAll(
                 ()->assertEquals(200, response.extract().statusCode()),
