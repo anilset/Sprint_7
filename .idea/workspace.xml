@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2b6b73a-d795-45dc-91e9-7374ea9de30e" name="Changes" comment="&quot;allure reports added&quot;">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/practikum/Ok.java" afterDir="false" />
+    <list default="true" id="d2b6b73a-d795-45dc-91e9-7374ea9de30e" name="Changes" comment="&quot;ok added&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practikum/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/practikum/LoginResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/practikum/CourierTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/practikum/CourierTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,11 +30,11 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -59,15 +59,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": ""
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -79,7 +79,7 @@
       <recent name="ru.practikum" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CourierTest.createCourierCheck">
+  <component name="RunManager" selected="JUnit.CourierTest.deleteCourierCheck">
     <configuration name="CourierTest.courierLoginCheck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sprint_7" />
       <extension name="coverage">
@@ -178,11 +178,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CourierTest.createCourierCheck" />
         <item itemvalue="JUnit.CourierTest.deleteCourierCheck" />
+        <item itemvalue="JUnit.CourierTest.createCourierCheck" />
         <item itemvalue="JUnit.OrderTest.checkListOfOrders" />
         <item itemvalue="JUnit.OrderTest.checkOrder" />
-        <item itemvalue="JUnit.CourierTest.courierLoginCheck (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -223,13 +222,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681771731716</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="&quot;ok added&quot;">
+      <created>1681772473360</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681772473360</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;initial commit&quot;" />
     <MESSAGE value="&quot;tests added&quot;" />
     <MESSAGE value="&quot;allure reports added&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;allure reports added&quot;" />
+    <MESSAGE value="&quot;ok added&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;ok added&quot;" />
   </component>
 </project>

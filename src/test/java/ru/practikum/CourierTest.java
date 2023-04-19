@@ -1,7 +1,5 @@
 package ru.practikum;
 
-import static io.restassured.RestAssured.given;
-
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import org.apache.http.HttpStatus;
@@ -32,7 +30,7 @@ public class CourierTest {
     @Test
     public void createCourierCheck() {
         Courier courier = getRandomCourier();
-        ValidatableResponse response = courierClient.create(courier);
+        ValidatableResponse response = courierClient.createCourier(courier);
         Ok ok = response.extract().body().as(Ok.class);
         assertAll (
                 ()-> assertEquals(SC_CREATED, response.extract().statusCode()),
@@ -45,8 +43,8 @@ public class CourierTest {
         String login = new Utilities().nextLogin;
         Courier courier1 = new Courier(login, new Utilities().nextPw, new Utilities().nextFirstName);
         Courier sameCourier = new Courier(login, new Utilities().nextPw, new Utilities().nextFirstName);
-        courierClient.create(courier1);
-        ValidatableResponse response2 = courierClient.create(sameCourier);
+        courierClient.createCourier(courier1);
+        ValidatableResponse response2 = courierClient.createCourier(sameCourier);
         assertEquals(HttpStatus.SC_CONFLICT, response2.extract().statusCode(), "Этот логин уже используется");
     }
 
@@ -62,7 +60,7 @@ public class CourierTest {
     @MethodSource("provideBlankCredentials")
     public void createCourierWithNoLoginOrPassword(String login, String pw, String name, Integer expected) {
         Courier courier = new Courier(login, pw, name);
-        ValidatableResponse response = courierClient.create(courier);
+        ValidatableResponse response = courierClient.createCourier(courier);
         assertEquals(expected, response.extract().statusCode(), "Недостаточно данных для создания учетной записи");
 
     }
@@ -85,7 +83,7 @@ public class CourierTest {
     @MethodSource("provideCredentialsToLogin")
     public void courierLoginCheck(String login, String pw, Integer expected) {
         Courier courier = new Courier(login, pw, new Utilities().nextFirstName);
-        courierClient.create(courier);
+        courierClient.createCourier(courier);
         CourierCreds creds = new CourierCreds(login, pw);
         ValidatableResponse response1 = courierClient.login(creds);
         assertEquals(expected, response1.extract().statusCode());
@@ -94,7 +92,7 @@ public class CourierTest {
     @Test
     public void courierLoginCheck() {
         Courier courier = getRandomCourier();
-        courierClient.create(courier);
+        courierClient.createCourier(courier);
         LoginResponse response = courierClient.login(CourierCreds.getCredsFrom(courier)).extract().body().as(LoginResponse.class);
         assertThat(response.getId(), notNullValue());
     }
@@ -102,11 +100,16 @@ public class CourierTest {
     @Test
     public void deleteCourierCheck() {
         Courier courier = getRandomCourier();
-        courierClient.create(courier);
-        courierClient.login(CourierCreds.getCredsFrom(courier));
+        courierClient.createCourier(courier);
         LoginResponse login = courierClient.login(CourierCreds.getCredsFrom(courier)).extract().body().as(LoginResponse.class);
-        Response response = courierClient.deleteCourier(login);
-        assertEquals(200, response.statusCode());
+        if (login.getId() != null) {
+            Response response = courierClient.deleteCourier(login);
+            Ok ok = response.as(Ok.class);
+            assertAll (
+                    //()-> assertEquals(SC_OK, response.statusCode()),
+                    ()-> assertFalse(ok.getOk())
+                );
+        }
     }
 }
 

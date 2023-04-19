@@ -17,7 +17,7 @@ public class CourierClient {
     }
 
 
-    public ValidatableResponse create(Courier courier) {
+    public ValidatableResponse createCourier(Courier courier) {
         return  given()
                 .header("Content-type", "application/json")
                 .and()
