@@ -1,4 +1,7 @@
-package ru.practikum;
+package ru.practikum.courier_services;
+
+import ru.practikum.Utilities;
+import ru.practikum.pojo.Courier;
 
 public class CourierGenerator {
     public static Courier getRandomCourier() {

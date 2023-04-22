@@ -1,4 +1,4 @@
-package ru.practikum;
+package ru.practikum.pojo;
 
 import java.util.List;
 

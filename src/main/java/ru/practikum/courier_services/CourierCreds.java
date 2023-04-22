@@ -1,4 +1,6 @@
-package ru.practikum;
+package ru.practikum.courier_services;
+
+import ru.practikum.pojo.Courier;
 
 public class CourierCreds {
     public String login;

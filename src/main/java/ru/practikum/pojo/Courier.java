@@ -1,4 +1,4 @@
-package ru.practikum;
+package ru.practikum.pojo;
 
 public class Courier {
     public String login;
